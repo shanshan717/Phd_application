@@ -1,99 +1,113 @@
-
-%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[letterpaper,11pt,oneside]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{setspace}
+\documentclass[a4paper,10pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
 \usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{titlesec}
-\usepackage[left=1in, right=1in, bottom=1.25in, top=1.25in]{geometry}
 \usepackage{enumitem}
-\pagenumbering{gobble}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{fontawesome}
 
-% Section formatting
-\titleformat{\section}{\Large\bfseries}{}{0em}{}[\titlerule]
-\titleformat{\subsection}{\bfseries}{}{0em}{}
+% Set up font and line spacing
+\renewcommand{\baselinestretch}{1.2}
+\renewcommand{\familydefault}{\sfdefault}
 
-%%%%%%%%%%%%%%%%% DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Customizing section titles
+\titleformat{\section}[block]{\normalfont\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[runin]{\normalfont\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}[runin]{\normalfont}{\thesubsubsection}{1em}{}
+
+% Header information
+\pagestyle{fancy}
+\fancyhead[L]{\textbf{Shanshan Zhu}}
+\fancyhead[R]{\href{mailto:zhushanshan0717@gmail.com}{zhushanshan0717@gmail.com} | \href{https://github.com/shanshan717}{github.com/shanshan717}}
+
+% Begin document
 \begin{document}
 
-% Name and contact info
+% Name
 \begin{center}
-    {\LARGE \textbf{Shanshan Zhu}}\\
-    \vspace{0.5em}
-    \href{mailto:zhushanshan0717@gmail.com}{zhushanshan0717@gmail.com} \quad | \quad
-    \href{https://github.com/shanshan717}{github.com/shanshan717} \quad | \quad
-    +86 19106858133 \\
-    Nanjing Normal University, Department of Psychology, Nanjing, China
+    \Huge \textbf{Shanshan Zhu} \\[0.5em]
+    \small \href{mailto:zhushanshan0717@gmail.com}{zhushanshan0717@gmail.com} | \href{https://github.com/shanshan717}{github.com/shanshan717}
 \end{center}
 
-\vspace{1em}
-
-%%%%%%%%%%%%%%%%% EDUCATION %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education section
 \section*{Education}
+\noindent
 \textbf{Nanjing Normal University}, Nanjing, China \\
-M.Sc. in Basic Psychology \hfill Sep 2023 -- Jun 2026 (Expected)
-
+\textit{M.Sc. in Basic Psychology} \hfill \textit{Sep 2023 -- Jun 2026 (Expected)} \\
+\vspace{0.3em}
 \textbf{Hangzhou Normal University}, Hangzhou, China \\
-B.A. in Health Services and Management \hfill Sep 2019 -- Jun 2023
+\textit{B.A. in Health Services and Management} \hfill \textit{Sep 2019 -- Jun 2023}
 
-%%%%%%%%%%%%%%%%% RESEARCH EXPERIENCE %%%%%%%%%%%%%%%%%
+% Research Experience section
 \section*{Research Experience}
-\textbf{Principal Investigator}, Self-Reference Database \hfill Jan 2023 -- Present \\
-\begin{itemize}[leftmargin=*]
-    \item Led the construction and cleaning of a self-reference dataset published on Science Data Bank.
-\end{itemize}
+\noindent
+\textbf{Principal Investigator, Self-Reference Database} \hfill \textit{Jan 2023 -- Present} \\
+- Led the construction and cleaning of a self-reference dataset shared on the Science Data Bank platform. \\
+- Leading an ALE meta-analysis project using Python to synthesize neuroimaging findings on self-referential processing (In Progress). \\[0.5em]
 
-\textbf{Principal Investigator}, fMRI Pipeline Tutorial (Chinese) \hfill Jul 2024 -- Present \\
-\begin{itemize}[leftmargin=*]
-    \item Authored a beginner-friendly fMRI data processing guide to support open science in neuroimaging.
-\end{itemize}
+\noindent
+\textbf{Principal Investigator, fMRI Pipeline Tutorial (Chinese)} \hfill \textit{Jul 2024 -- Present} \\
+- Authored a beginner-friendly fMRI data processing guide to support open science in neuroimaging. \\[0.5em]
 
-\textbf{MRI Technician}, CCNP Project, Nanjing Site \hfill Oct 2024 -- Jul 2025 \\
-\begin{itemize}[leftmargin=*]
-    \item Conducted MRI scans for school-age children and assisted in quality assurance for longitudinal neuroimaging data.
-\end{itemize}
+\noindent
+\textbf{MRI Technician, CCNP Project, Nanjing Site} \hfill \textit{Oct 2024 -- Jul 2025} \\
+- Conducted MRI scans for school-age children and assisted in quality assurance for longitudinal neuroimaging data. \\[0.5em]
 
-\textbf{Research Assistant}, Legal Education and Brain Function Study \\
-\begin{itemize}[leftmargin=*]
-    \item Co-authored paper and conducted fMRI preprocessing and analysis to explore effects of legal education on cognition.
-\end{itemize}
+\noindent
+\textbf{Research Assistant, Legal Education and Brain Function Study} \hfill \textit{Feb 2024 -- Present} \\
+- Co-authored a paper and conducted fMRI preprocessing and analysis to explore the effects of legal education on cognition.
 
-%%%%%%%%%%%%%%%%% TEACHING EXPERIENCE %%%%%%%%%%%%%%%%%
+% Teaching Experience section
 \section*{Teaching Experience}
-\textbf{Teaching Assistant}, Bayesian Methods in Psychology \hfill Sep 2024 -- Jan 2025 \\
-Instructor: Prof. Chuan-Peng Hu, Nanjing Normal University \\
-\begin{itemize}[leftmargin=*]
-    \item Facilitated labs and tutorials, assisting students with R and Python-based Bayesian statistics.
-\end{itemize}
+\noindent
+\textbf{Teaching Assistant, Bayesian Methods in Psychology} \hfill \textit{Sep 2024 -- Jan 2025} \\
+Nanjing Normal University | Instructor: Prof. Chuan-Peng Hu \\
+- Facilitated labs and tutorials, assisting students with R and Python-based Bayesian statistics.
 
-%%%%%%%%%%%%%%%%% INTERNSHIPS %%%%%%%%%%%%%%%%%%%%%%%%%
+% Professional Training section
+\section*{Professional Training}
+\noindent
+\textbf{FSL Neuroimaging Analysis Workshop} \hfill \textit{Jul 2024} \\
+Institute of Psychology, Chinese Academy of Sciences \\
+- Completed a 1-week intensive training and received certification.
+
+% Internship Experience section
 \section*{Internship Experience}
-\textbf{AI Trainer Intern}, NetEase Intelligence \hfill May 2023 -- Sep 2023 \\
-\begin{itemize}[leftmargin=*]
-    \item Annotated NLP training data; contributed to cognitive-linguistic tasks and model performance.
-\end{itemize}
+\noindent
+\textbf{AI Trainer Intern, NetEase Intelligence} \hfill \textit{May 2023 -- Sep 2023} \\
+- Annotated NLP training data; contributed to cognitive-linguistic tasks and model performance. \\[0.5em]
 
-\textbf{Research Intern}, Sir Run Run Shaw Hospital \hfill Jul 2022 -- Dec 2022 \\
-\begin{itemize}[leftmargin=*]
-    \item Supported research administration; assisted with documentation and ethical reviews.
-\end{itemize}
+\noindent
+\textbf{Research Intern, Sir Run Run Shaw Hospital} \hfill \textit{Jul 2022 -- Dec 2022} \\
+- Supported research administration; assisted with documentation and ethical reviews. \\[0.5em]
 
-\textbf{Medical Observer}, Affiliated Hospital of HNU \hfill Jul 2021 -- Sep 2021 \\
-\begin{itemize}[leftmargin=*]
-    \item Gained early exposure to clinical settings in psychiatry and behavioral health.
-\end{itemize}
+\noindent
+\textbf{Medical Observer, Affiliated Hospital of HNU} \hfill \textit{Jul 2021 -- Sep 2021} \\
+- Gained early exposure to clinical settings in psychiatry and behavioral health.
 
-%%%%%%%%%%%%%%%%% CONFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%
+% Conferences and Presentations section
 \section*{Conferences and Presentations}
-\textbf{24th National Congress of Psychology}, Chengdu, China \hfill Oct 2023 \\
-\begin{itemize}[leftmargin=*]
-    \item Oral presentation: \textit{"Abnormal Brain Activity in Self-Referential Processing Among Psychiatric Patients: An ALE Meta-Analysis"}
-\end{itemize}
+\noindent
+\textbf{24th National Congress of Psychology}, Chengdu, China \hfill \textit{Oct 2023} \\
+- Oral presentation: "Abnormal Brain Activity in Self-Referential Processing Among Psychiatric Patients: An ALE Meta-Analysis" \\[0.5em]
 
-\textbf{Frontiers in Cognitive Neuroscience Hackathon}, Hangzhou, China \hfill Aug 2024 \\
-\begin{itemize}[leftmargin=*]
-    \item Initiator and lead: \textit{"Python-Based fMRI Data Analysis Pipeline"}
+\noindent
+\textbf{Frontiers in Cognitive Neuroscience Hackathon}, Hangzhou, China \hfill \textit{Aug 2024} \\
+- Initiator and lead: "Python-Based fMRI Data Analysis Pipeline"
+
+% Academic Service section
+\section*{Academic Service}
+\noindent
+\textbf{Chinese Open Science Network} \hfill \textit{2023 -- Present} \\
+- Academic Secretary: Assisted with planning and coordination of scholarly activities. \\
+- WeChat Content Editor: Responsible for formatting and publishing WeChat articles.
+
+% Skills section
+\section*{Skills}
+\begin{itemize}[left=0pt, label=--]
+    \item \textbf{Programming:} Python, R
+    \item \textbf{Neuroimaging:} FSL (certified), fMRI preprocessing, ALE meta-analysis
+    \item \textbf{Tools:} Microsoft Office, LaTeX, GitHub
 \end{itemize}
 
 \end{document}
