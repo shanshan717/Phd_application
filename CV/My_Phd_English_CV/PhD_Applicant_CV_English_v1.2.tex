@@ -1,115 +1,167 @@
-\documentclass[11pt,a4paper]{article}
-\usepackage{geometry}
-\geometry{margin=1in}
+\documentclass[10pt,a4paper]{article}
+\usepackage[left=1.3cm,right=1.3cm,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{enumitem}
 \usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    urlcolor=blue
-}
-\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{multicol}
 \usepackage{parskip}
-\setlength{\parskip}{0.5em}
-\setlength{\parindent}{0em}
+\usepackage{amsmath}
+\setlength{\parindent}{0pt}
 
-% Set up header for Last Updated
-\pagestyle{fancy}
-\fancyhf{}
-\rhead{Last Updated: April 27, 2025}
+% Section formatting
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{0.3em}{0.3em}
+
+% Bullet formatting: solid black circles
+\setlist[itemize]{nosep, leftmargin=*, label=\textbullet}
+
+\pagestyle{empty}
 
 \begin{document}
 
 \begin{center}
-    {\LARGE \textbf{Shanshan Zhu}} \\
-    \vspace{0.2cm}
-    \href{mailto:zhushanshan0717@gmail.com}{zhushanshan0717@gmail.com} \quad |\quad \href{https://github.com/shanshan717}{github.com/shanshan717} \\
+    {\fontsize{20}{28}\selectfont \textbf{Shanshan Zhu}} \\[0.8em]
+    {\large
+    E-mail: zhushanshan0717@gmail.com \ \textbar\ 
+    \href{https://github.com/shanshan717}{github.com/shanshan717}
+    }
 \end{center}
 
-\hrule
-\vspace{0.5cm}
+\vspace{1 em} 
 
-\section*{Education}
+\section*{EDUCATION}
+\textbf{Nanjing Normal University} \hfill \textit{Nanjing, China} \\
+M.Sc. in Psychology \hfill \textit{Exp. Jun 2026} \\
+\textit{Core Courses: Experimental Psychology, R Programming in Psychology, Advanced Research Methods, Bayesian Statistics}
 
-\textbf{Nanjing Normal University, Nanjing, China (GPA: 3.71/4.00)} \hfill Sep 2023 -- Jun 2026 (Expected) \\
-M.Sc. in Basic Psychology \\
-Relevant Coursework: Bayesian Data Analysis in Psychology, Experimental Psychology, R Language and Its Applications in Psychological Research
+\vspace{0.8 em} 
 
-\vspace{0.3cm}
+\textbf{Hangzhou Normal University} \hfill \textit{Hangzhou, China} \\
+B.A. in Health Services and Management \hfill \textit{Jun 2023} \\
+\textit{Core Courses: Medical Statistics, Epidemiology, Clinical Medicine, Behavioral Medicine}
 
-\textbf{Hangzhou Normal University, Hangzhou, China (GPA: 3.80/5.00)} \hfill Sep 2019 -- Jun 2023 \\
-B.A. in Health Services and Management
+\vspace{1 em} 
 
-\vspace{0.5cm}
+\section*{RESEARCH EXPERIENCE}
+\textbf{A Cognitive Ontological Dataset for Self-Referential Processing} \hfill \href{https://www.scidb.cn/en/detail?dataSetId=1b53c91112024d71b95c42bbd748141f&version=V4}{[Science Data Bank]} \\
+\textit{Principal Investigator} \hfill \textit{Jan 2023 – Present}
+\begin{itemize}
+    \item Curated and shared an fMRI dataset on self-referential processing.
+    \item Conducted systematic literature review, data standardization, and codebook revision.
+    \item Expanded dataset to include psychiatric populations and lifespan samples.
+\end{itemize}
 
-\section*{Research Experience}
+\textbf{Neuroimaging Meta-Analysis of Self-Referential Processing Across Disorders} \\
+\textit{Lead Researcher} \hfill \textit{Nov 2024 – Present}
+\begin{itemize}
+    \item Conducted coordinate-based meta-analysis (ALE) using \textbf{NiMARE}.
+    \item Performed visualization with \textbf{Nilearn} and \textbf{Connectome Workbench}.
+    \item Pre-registered on OSF: \href{https://osf.io/8rx4a/}{osf.io/8rx4a}.
+\end{itemize}
 
-\textbf{Principal Investigator, Self-Reference Database}, \href{https://doi.org/10.57760/sciencedb.j00001.00469}{[web]}  \hfill Jan 2023 -- Present \\
-- Led the construction and data cleaning of a self-reference dataset shared on the Science Data Bank platform.
+\textbf{Python-Based fMRI Data Analysis Chinese Pipeline} \hfill \href{https://github.com/shanshan717/fMRI_Pipeline.git}{[GitHub]} \\
+\textit{Lead Researcher} \hfill \textit{Sep 2024 – Present}
+\begin{itemize}
+    \item Developed open-source pipeline for: DICOM–NIfTI (BIDS, heudiconv), surface mapping, preprocessing (fMRIPrep), QC (MRIQC), GLM and MVPA (Nilearn, Brainstats).
+    \item Authored tutorials tailored for non-native English speakers.
+\end{itemize}
 
-\textbf{Principal Investigator, ALE Meta-Analysis} \hfill Feb 2024 -- Present \\
-- Leading an ALE meta-analysis project using Python (NiMARE package) to synthesize neuroimaging findings on self-referential processing. \\
-- Project title: \textit{``Abnormal Brain Activations During Self-Referential Processing Across Psychiatric Disorders: A Transdiagnostic Neuroimaging Meta-Analysis''} (In Progress).
+\textbf{Self-Reference Modulates Stimulus Representations in Visual Cortex} \\
+\textit{Undergraduate Thesis Project} \hfill \textit{March 2024 – Present}
+\begin{itemize}
+    \item Designed and programmed block-design tasks in \textbf{PsychoPy}.
+    \item Conducted fMRI data acquisition as scanner operator.
+    \item Performed MVPA analysis of visual cortical representations.
+\end{itemize}
 
-\textbf{Research Assistant, Legal Education and Brain Function Study} \hfill Feb 2024 -- Present \\
-- Co-authored a manuscript and conducted fMRI preprocessing and analysis to investigate the effects of legal education on cognitive functions.
+\textbf{The Impact of Legal Professional Education on Moral and Legal Reasoning} \\
+\textit{Research Assistant} \hfill \textit{Sep 2023 – Present}
+\begin{itemize}
+    \item Conducted preprocessing and GLM analysis using \textbf{Nilearn}.
+    \item Performed gPPI analysis with \textbf{MATLAB (CONN toolbox)}.
+    \item Contributed to group-level interpretation and manuscript.
+\end{itemize}
 
-\vspace{0.5cm}
+\vspace{1 em} 
 
-\section*{Teaching Experience}
+\section*{TEACHING EXPERIENCE}
+\textbf{Bayesian Methods in Psychology} \hfill Teaching Assistant \hfill \textit{Spring 2024} \\
+\textit{Supervisor: Prof. Chuan-Peng Hu, Nanjing Normal University}
+\begin{itemize}
+    \item Led tutorials and labs on Bayesian modeling using \textbf{PyMC}.
+    \item Provided technical support to graduate students.
+\end{itemize}
 
-\textbf{Teaching Assistant, Bayesian Methods in Psychology} \hfill Sep 2024 -- Jan 2025 \\
-Nanjing Normal University | Instructor: Prof. Chuan-Peng Hu \\
-- Led laboratory sessions and tutorials, supporting students with R and Python-based Bayesian statistics.
+\vspace{1 em} 
 
-\vspace{0.5cm}
+\section*{PROFESSIONAL EXPERIENCE}
+\textbf{Chinese Child Brain Development Project} \hfill MRI Technician \hfill \textit{Oct 2024 – Present}
+\begin{itemize}
+    \item Certified MRI operator; acquired structural, functional, and diffusion scans for children (ages 6–8).
+    \item Ensured longitudinal neuroimaging data quality control.
+\end{itemize}
 
-\section*{Professional Training}
+\textbf{Institute of Psychology, Chinese Academy of Sciences} \hfill Trainee \hfill \textit{Jul 2024}
+\begin{itemize}
+    \item Completed one-week intensive training in \textbf{FSL} neuroimaging analysis.
+\end{itemize}
 
-\textbf{FSL Neuroimaging Analysis Workshop} \hfill Jul 2024 \\
-Institute of Psychology, Chinese Academy of Sciences \\
-- Completed a one-week intensive training course and received certification.
+\textbf{NetEase Intelligence} \hfill AI Trainer Intern \hfill \textit{May – Sep 2023}
+\begin{itemize}
+    \item Annotated and curated NLP corpora for LLM training.
+    \item Improved dataset quality using cognitive-linguistic principles.
+\end{itemize}
 
-\textbf{MRI Technician, CCNP Project, Nanjing Site} \hfill Oct 2024 -- Jul 2025 \\
-- Conducted MRI scans of school-aged children and contributed to longitudinal neuroimaging data quality control.
+\textbf{Affiliated Hospital of Zhejiang University School of Medicine (Sir Run Run Shaw Hospital)} \hfill Research Intern \hfill \textit{Jul – Dec 2022}
+\begin{itemize}
+    \item Assisted with research administration, ethics review, and documentation.
+\end{itemize}
 
-\vspace{0.5cm}
+\textbf{Affiliated Hospital of Hangzhou Normal University} \hfill Medical Observer \hfill \textit{Jul – Sep 2021}
+\begin{itemize}
+    \item Gained early clinical exposure in psychiatry and behavioral health units.
+\end{itemize}
 
-\section*{Internship Experience}
+\vspace{1 em} 
 
-\textbf{AI Trainer Intern, NetEase Intelligence} \hfill May 2023 -- Sep 2023 \\
-- Annotated NLP training datasets and contributed to cognitive-linguistic tasks to improve model performance.
+\section*{CONFERENCES AND PRESENTATIONS}
+\textbf{24th National Congress of Psychology} \hfill Chengdu, China \\
+Oral Presentation: \textit{Abnormal Brain Activity in Self-Referential Processing Among Psychiatric Patients} \hfill \textit{Oct 2023}
 
-\textbf{Research Intern, Sir Run Run Shaw Hospital} \hfill Jul 2022 -- Dec 2022 \\
-- Assisted with research administration, documentation, and ethical review processes.
+\textbf{Cognitive Neuroscience Summer Hackathon} \hfill Hangzhou, China \\
+Project Leader \hfill \textit{Aug 2024} 
+\begin{itemize}
+    \item Led Python-based fMRI pipeline development project.
+\end{itemize}
 
-\textbf{Medical Observer, Affiliated Hospital of Hangzhou Normal University} \hfill Jul 2021 -- Sep 2021 \\
-- Gained early clinical exposure in psychiatry and behavioral health units.
+\textbf{Cognitive Neuroscience Summer Hackathon} \hfill Shenzhen, China \\
+Contributor \hfill \textit{Aug 2025}
+\begin{itemize}
+    \item Contributed to EEG-based emotion decoding project.
+\end{itemize}
 
-\vspace{0.5cm}
+\vspace{1 em} 
 
-\section*{Conferences and Presentations}
+\section*{ACADEMIC SERVICE}
+\textbf{Chinese Open Science Network} \hfill \textit{2023 – Present} 
+\begin{itemize}
+    \item Academic Secretary: supported planning and organization of scholarly activities.
+    \item WeChat Content Editor: produced and published articles promoting open science.
+\end{itemize}
 
-\textbf{24th National Congress of Psychology}, Chengdu, China \hfill Oct 2023 \\
-- Oral Presentation: \textit{``Abnormal Brain Activity in Self-Referential Processing Among Psychiatric Patients: An ALE Meta-Analysis''}
+\vspace{1 em} 
 
-\textbf{Frontiers in Cognitive Neuroscience Hackathon}, Hangzhou, China \hfill Aug 2024 \\
-- Initiator and Team Lead: \textit{``Python-Based fMRI Data Analysis Pipeline''}
+\section*{TECHNICAL SKILLS}
+\begin{itemize}
+    \item \textbf{Programming:} Python (primary), R, MATLAB 
+    \item \textbf{Neuroimaging:} fMRIPrep, MRIQC, Connectome Workbench, FSL (certified), ALE meta-analysis, NiMARE, Nilearn, Brainstats
+    \item \textbf{Tools:} GitHub, Docker, Jupyter, LaTeX, Microsoft Office
+    \item \textbf{Languages:} English, Chinese (native)
+\end{itemize}
 
-\vspace{0.5cm}
+\vspace{1 em} 
 
-\section*{Academic Service}
-
-\textbf{Chinese Open Science Network} \hfill 2023 -- Present \\
-- Academic Secretary: Supported the planning and organization of scholarly activities. \\
-- WeChat Content Editor: Produced, formatted, and published official articles to promote open science initiatives.
-
-\vspace{0.5cm}
-
-\section*{Skills}
-
-- \textbf{Programming}: Python, R, MATLAB \\
-- \textbf{Neuroimaging}: FSL (certified), fMRI preprocessing, ALE meta-analysis \\
-- \textbf{Tools}: Microsoft Office, LaTeX, GitHub
+\section*{INTERESTS}
+Long-distance running (half-marathons), rock climbing
 
 \end{document}
